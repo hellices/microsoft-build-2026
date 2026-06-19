@@ -31,6 +31,7 @@ mkdocs serve   # http://127.0.0.1:8000
 
 ## License
 
-본 저장소의 원본 정리물은 [CC BY 4.0](LICENSE) 으로 배포됩니다.
-세션 콘텐츠의 저작권은 Microsoft Corporation 에 있으며, 본 저장소는 공개된 세션
-자료 기반의 비공식 2차 정리물입니다. 원본 링크는 각 세션 노트 하단의 Resources 섹션 참조.
+- 원본 정리물 (요약, takeaways, 다이어그램 등): [CC BY 4.0](LICENSE)
+- Microsoft 콘텐츠 인용 범위·트레이드마크 등 상세 안내: [NOTICE.md](NOTICE.md)
+
+본 저장소는 Microsoft 공식이 아닌 비공식 커뮤니티 노트입니다.
