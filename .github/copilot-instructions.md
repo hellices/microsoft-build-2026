@@ -10,24 +10,31 @@
 ## File layout (must follow)
 
 ```
-sessions/<SESSION_ID>-<kebab-slug>.md   # 세션 1개 = 파일 1개
-themes/<topic>.md                       # 주제별 큐레이션
-sessions/_TEMPLATE.md                   # 세션 템플릿 (수정 금지, 복사해서 사용)
-themes/_TEMPLATE.md                     # 주제 템플릿 (수정 금지, 복사해서 사용)
+docs/
+├── index.md                      # 사이트 홈 (세션 인덱스)
+├── contributing.md               # 작성 규약
+├── sessions/
+│   ├── _TEMPLATE.md              # 세션 템플릿 (수정 금지, 복사해서 사용)
+│   ├── BRK000-example-session.md # 작성 예시 (참고용, 수정 가능)
+│   └── <SESSION_ID>-<kebab-slug>.md   # 세션 1개 = 파일 1개
+└── themes/
+    ├── _TEMPLATE.md
+    └── <topic>.md                # 주제별 큐레이션
 ```
 
+- 모든 콘텐츠는 `docs/` 안에 위치. 루트의 `README.md` 는 GitHub 표시용이며 사이트 빌드 대상이 아님.
 - 세션 ID 예: `KEY01`, `BRK226`, `DEM330`, `ODSP907`, `DEM368-R1` (R1 같은 리비전 표기 유지).
 - 슬러그는 소문자·하이픈만, 관사(a/the) 생략.
-- 예시 파일: [`sessions/BRK000-example-session.md`](../sessions/BRK000-example-session.md)
+- 예시 파일: [`docs/sessions/BRK000-example-session.md`](../docs/sessions/BRK000-example-session.md)
 
 ## When creating a new session
 
-1. `sessions/_TEMPLATE.md` 를 복사해 새 파일 생성.
+1. `docs/sessions/_TEMPLATE.md` 를 복사해 새 파일 생성.
 2. Frontmatter를 모두 채우거나, 모르는 필드는 **빈 채로 두고 키는 남김** (필드 삭제 금지).
 3. `_TEMPLATE.md` 의 헤더 순서·이름은 변경하지 않음. 내용 없으면 빈 채로 두기.
-4. `README.md` 의 해당 토픽 표에 한 줄 추가하고 상태 이모지 갱신:
+4. `docs/index.md` 의 해당 토픽 표에 한 줄 추가하고 상태 이모지 갱신:
    - `🔜` 예정 · `⏳` 작성 중 (`draft`/`review`) · `✅` 완료 (`done`)
-5. `mkdocs.yml` 의 `nav` 트리에도 한 줄 추가.
+5. `mkdocs.yml` 의 `nav` 트리에도 한 줄 추가 (경로는 `docs/` 기준 상대경로).
 
 ## Writing rules
 
@@ -72,12 +79,12 @@ last_updated: YYYY-MM-DD     # 필수
 
 ## When creating a new theme page
 
-- `themes/_TEMPLATE.md` 복사 → `themes/<topic>.md`.
+- `docs/themes/_TEMPLATE.md` 복사 → `docs/themes/<topic>.md`.
 - Related sessions 섹션에는 실제 작성된 세션 노트만 링크.
 
 ## Things Copilot should NOT do
 
-- `sessions/_TEMPLATE.md`, `themes/_TEMPLATE.md` 의 구조를 수정.
+- `docs/sessions/_TEMPLATE.md`, `docs/themes/_TEMPLATE.md` 의 구조를 수정.
 - `mkdocs.yml` 의 `theme` / `plugins` / `markdown_extensions` 블록을 임의 변경.
 - 발표자 이메일·내부 URL·NDA 콘텐츠 포함.
 - 영어 본문으로 전환하거나 마케팅 톤으로 다시 쓰기.

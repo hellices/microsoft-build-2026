@@ -3,17 +3,10 @@ site_description: Customer-oriented session notes from Microsoft Build 2026.
 site_url: https://hellices.github.io/microsoft-build-2026/
 repo_url: https://github.com/hellices/microsoft-build-2026
 repo_name: hellices/microsoft-build-2026
-edit_uri: edit/main/
+edit_uri: edit/main/docs/
 
-docs_dir: .
+docs_dir: docs
 site_dir: _site
-
-exclude_docs: |
-  .github/
-  .venv/
-  node_modules/
-  _site/
-  LICENSE
 
 theme:
   name: material
@@ -71,10 +64,10 @@ markdown_extensions:
 # nav is intentionally minimal. Session/theme entries will be added as files
 # are authored. Until then MkDocs will still pick up new pages in search.
 nav:
-  - Home: README.md
+  - Home: index.md
   - Sessions:
       - Example (BRK000): sessions/BRK000-example-session.md
       - Template: sessions/_TEMPLATE.md
   - Themes:
       - Template: themes/_TEMPLATE.md
-  - Contributing: CONTRIBUTING.md
+  - Contributing: contributing.md
