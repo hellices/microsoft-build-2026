@@ -1,0 +1,80 @@
+site_name: Microsoft Build 2026 — Session Notes
+site_description: Customer-oriented session notes from Microsoft Build 2026.
+site_url: https://hellices.github.io/microsoft-build-2026/
+repo_url: https://github.com/hellices/microsoft-build-2026
+repo_name: hellices/microsoft-build-2026
+edit_uri: edit/main/
+
+docs_dir: .
+site_dir: _site
+
+exclude_docs: |
+  .github/
+  .venv/
+  node_modules/
+  _site/
+  LICENSE
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+# nav is intentionally minimal. Session/theme entries will be added as files
+# are authored. Until then MkDocs will still pick up new pages in search.
+nav:
+  - Home: README.md
+  - Sessions:
+      - Example (BRK000): sessions/BRK000-example-session.md
+      - Template: sessions/_TEMPLATE.md
+  - Themes:
+      - Template: themes/_TEMPLATE.md
+  - Contributing: CONTRIBUTING.md
