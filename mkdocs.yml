@@ -11,6 +11,7 @@ site_dir: _site
 theme:
   name: material
   language: ko
+  font: false   # disable Google Fonts (Roboto); we self-load Pretendard via extra.css
   features:
     - navigation.instant
     - navigation.tracking
@@ -24,20 +25,26 @@ theme:
     - content.action.edit
     - toc.follow
   palette:
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
-        name: Switch to light mode
+        name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
 
@@ -60,6 +67,12 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.highlight:
       anchor_linenums: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/status-chips.js
 
 # nav is intentionally minimal. Session/theme entries will be added as files
 # are authored. Until then MkDocs will still pick up new pages in search.

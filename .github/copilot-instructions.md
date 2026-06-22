@@ -49,6 +49,7 @@ docs/
 
 ```yaml
 session_id: BRK000           # 필수
+session_type: breakout       # keynote | breakout | demo | panel | lab | lightning | announcement
 title: ""                    # 필수, 원문 그대로
 speakers: []                 # 알 수 있으면 "Name (Role, Org)" 형식
 track: ""                    # Keynote | Agents | Observability | Data | Security | ...
@@ -59,30 +60,63 @@ status: draft                # draft | review | done (필수)
 last_updated: YYYY-MM-DD     # 필수
 ```
 
-## Required sections in every session note
+## Session note structure
 
-기본 순서 (일반 BRK/DEM 세션):
+세션 노트는 6 카테고리로 묶인 섹션을 사용합니다. 각 섹션에는 **포함 조건**이 정해져 있어 무조건 비워 두지 않고, 해당 없으면 통째 삭제할 수 있습니다.
 
-1. `## TL;DR` — 한두 문장
-2. `## Top highlights` — 키노트/하이라이트 성 세션에서 정말 중요한 3~5개 항목 (`### N. 제목` + 1~2문장 요약). 일반 세션에서는 생략 가능.
-3. `## Why it matters` — 고객 관점, 불릿 2~4개
-4. `## Key announcements` — 표 (항목 / 상태 / 날짜 / 비고)
-5. `## Session summary` — 섹션별 (`### 1.`, `### 2.` ...)
-6. `## Demo highlights` — `⏱️ MM:SS — <name>: <one-liner>`
-7. `## Architecture / Diagram` — 다이어그램 (아래 규칙 참고)
-8. `## Code & samples` — 핵심 스니펫
-9. `## Caveats / Open questions` — 미확정 사항
-10. `## Resources` — Session / Slides / GitHub / Docs
-11. `## Notes` — 내부 메모 (고객 배포 시 제거 가능)
+| # | 카테고리 | 섹션 | 조건 |
+|---|---|---|---|
+| 1 | **Summary** | `## TL;DR` | 필수 |
+|   |   | `## Top highlights` | 해당 시 — 키노트·정보 밀도 높은 세션 |
+| 2 | **Context** | `## Why it matters` | 필수 |
+|   |   | `## Customer scenarios` | 권장 — 떠오르는 실제 시나리오가 있을 때 |
+| 3 | **Announcements** | `## Key announcements` (표) | 해당 시 — 발표 1건 이상 |
+| 4 | **Deep dive** | `## Session summary` | 권장 — 일반 BRK/DEM에서 발표 흐름 |
+|   |   | `## Architecture` | 해당 시 — 다이어그램·구조 설명 |
+|   |   | `## Demo highlights` | 해당 시 — 데모가 있을 때 |
+|   |   | `## Code & samples` | 해당 시 — 핵심 코드 등장 |
+| 5 | **Assessment** | `## Caveats & open questions` | 권장 — 미확정 사항이 있을 때 |
+|   |   | `## Customer takeaways` | 권장 — "이걸 어떻게 전달하지" 메모 |
+| 6 | **References** | `## Resources` | 필수 — 최소 Session 링크 |
+|   |   | `## Related sessions` | 권장 — 연관 세션 |
+|   |   | `## Notes` | 권장 — 내부 메모, 공개 전 정리 |
 
-### 섹션 적용 규칙
+순서는 위 표의 카테고리·섹션 순서를 따릅니다. 섹션 헤딩 이름은 변경하지 않습니다 (조건에 따라 통째 삭제만 함).
 
-- 일반 세션 (BRK/DEM 등): 내용이 없으면 섹션을 비워두기 — 섹션 자체는 유지.
-- **키노트 및 패널/요약성 세션**: 다음 섹션은 세션 성격에 맞지 않으면 **삭제 가능** — 억지로 비워두지 말 것.
-  - `## Demo highlights` — 데모가 없는 키노트
-  - `## Code & samples` — 코드 스니펫이 없는 세션
-  - `## Resources` 안의 `💻 GitHub` 항목 — 공식 GitHub 저장소가 없는 세션 (다른 Resources 항목은 유지)
-- `## Top highlights`는 정보 밀도가 매우 높은 키노트에서 권장. TL;DR 한 줄로 부족한 "이 세션에서 진짜 기억해야 할 것" 을 3~5개로 상단에 짚어줌.
+### 조건별 처리 원칙
+
+- **필수**: 어떤 세션이든 항상 포함하고 채움.
+- **권장**: 내용이 있으면 채우고, 정말로 비어 있을 때만 섹션을 통째 삭제.
+- **해당 시**: 세션 성격에 맞을 때만 포함. 없으면 통째 삭제 (빈 채로 두지 않음).
+
+### session_type별 권장 조합
+
+| session_type | 핵심 섹션 |
+|---|---|
+| `keynote`      | TL;DR · **Top highlights** · Why it matters · Key announcements · Resources |
+| `breakout`     | TL;DR · Why it matters · Customer scenarios · Key announcements · **Session summary** · Architecture · Demo · Code · Caveats · Resources |
+| `demo`         | TL;DR · Why it matters · **Demo highlights** · **Code & samples** · Architecture · Resources |
+| `panel`        | TL;DR · Top highlights · Why it matters · Customer takeaways · Resources |
+| `lab`          | TL;DR · Why it matters · Session summary · **Code & samples** · Caveats · Resources |
+| `lightning`    | TL;DR · Top highlights · Resources |
+| `announcement` | TL;DR · **Key announcements** · Why it matters · Resources |
+
+굵게 표시된 섹션은 해당 타입의 시그니처 — 비워 두지 말 것.
+
+### Block-level status callouts
+
+표 안의 inline status chip과 별개로, 본문에서 발표 1건을 강조할 때 다음 타입드 admonition을 사용:
+
+```markdown
+!!! ga "GA · 2026-06-16"
+!!! preview "Public Preview"
+!!! preview-private "Private Preview"
+!!! limited "Limited Availability"
+!!! roadmap "Roadmap"
+!!! event "Event"
+```
+
+좌측 컬러 border + 마스크된 SVG 아이콘 + tinted 헤더가 자동 적용됨.
 
 ## Diagrams (Excalidraw + PNG)
 
@@ -114,7 +148,8 @@ last_updated: YYYY-MM-DD     # 필수
 
 ## Things Copilot should NOT do
 
-- `docs/sessions/_TEMPLATE.md`, `docs/themes/_TEMPLATE.md` 의 구조를 수정.
+- 세션 노트 안의 6개 카테고리 **순서**를 임의 변경.
+- 섹션 헤딩 **이름** 임의 변경 (조건에 따라 통째 삭제만 함).
 - `mkdocs.yml` 의 `theme` / `plugins` / `markdown_extensions` 블록을 임의 변경.
 - 발표자 이메일·내부 URL·NDA 콘텐츠 포함.
 - 영어 본문으로 전환하거나 마케팅 톤으로 다시 쓰기.

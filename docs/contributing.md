@@ -33,6 +33,50 @@
 
 `README.md`의 표 상태와 frontmatter `status`는 일치시킵니다.
 
+## Status callouts (block-level)
+
+표 안의 상태 칩과 별개로, 본문에서 한 가지 발표를 강조하고 싶을 때 다음 admonition 타입을 사용할 수 있습니다.
+
+```markdown
+!!! ga "GA · 2026-06-16"
+    Work IQ — M365 in-place, Chat/Context/Tools/Workspaces API
+
+!!! preview "Public Preview"
+    Manifold Direct Virtualization — VM 추론 25× 가속
+
+!!! preview-private "Private Preview"
+    Project Mosaic — workload-aware HBM/DRAM 메모리 풀
+
+!!! limited "Limited Availability"
+    NDv6 GB300 (Blackwell Ultra) 클러스터
+
+!!! roadmap "Roadmap"
+    Azure Integrated HSM — confidential AI 시그너처 보호
+
+!!! event "Event"
+    Microsoft Build 2026 · 2026-06-15 ~ 18
+```
+
+실제 렌더링:
+
+!!! ga "GA · 2026-06-16"
+    Work IQ — M365 in-place, Chat/Context/Tools/Workspaces API
+
+!!! preview "Public Preview"
+    Manifold Direct Virtualization — VM 추론 25× 가속
+
+!!! preview-private "Private Preview"
+    Project Mosaic — workload-aware HBM/DRAM 메모리 풀
+
+!!! limited "Limited Availability"
+    NDv6 GB300 (Blackwell Ultra) 클러스터
+
+!!! roadmap "Roadmap"
+    Azure Integrated HSM — confidential AI 시그너처 보호
+
+!!! event "Event"
+    Microsoft Build 2026 · 2026-06-15 ~ 18
+
 ## Adding a new session
 
 1. `sessions/_TEMPLATE.md` 를 복사.
