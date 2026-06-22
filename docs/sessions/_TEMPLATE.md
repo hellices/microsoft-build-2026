@@ -88,10 +88,6 @@ last_updated: 2026-06-22
 
 -
 
-## Customer takeaways  <!-- [권장] "이걸 우리 고객에게 어떻게 전달하지" 메모 -->
-
--
-
 <!-- ════════ 6. References ════════ -->
 
 ## Resources  <!-- [필수] 최소 Session 링크 -->

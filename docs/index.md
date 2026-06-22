@@ -63,7 +63,7 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 | ID | Title | Status |
 |----|-------|--------|
 | ODSP938 | Mitigate software supply chain risks in GitHub Actions | 🔜 |
-| DEM350 | GitHub Agentic Workflows: Automation That Actually Reads the Room | 🔜 |
+| [DEM350](sessions/DEM350-github-agentic-workflows.md) | GitHub Agentic Workflows: Automation That Actually Reads the Room | ⏳ |
 
 ### 📱 On-device & Edge
 

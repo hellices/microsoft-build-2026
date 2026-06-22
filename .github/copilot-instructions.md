@@ -76,7 +76,6 @@ last_updated: YYYY-MM-DD     # 필수
 |   |   | `## Demo highlights` | 해당 시 — 데모가 있을 때 |
 |   |   | `## Code & samples` | 해당 시 — 핵심 코드 등장 |
 | 5 | **Assessment** | `## Caveats & open questions` | 권장 — 미확정 사항이 있을 때 |
-|   |   | `## Customer takeaways` | 권장 — "이걸 어떻게 전달하지" 메모 |
 | 6 | **References** | `## Resources` | 필수 — 최소 Session 링크 |
 |   |   | `## Related sessions` | 권장 — 연관 세션 |
 |   |   | `## Notes` | 권장 — 내부 메모, 공개 전 정리 |
@@ -96,7 +95,7 @@ last_updated: YYYY-MM-DD     # 필수
 | `keynote`      | TL;DR · **Top highlights** · Why it matters · Key announcements · Resources |
 | `breakout`     | TL;DR · Why it matters · Customer scenarios · Key announcements · **Session summary** · Architecture · Demo · Code · Caveats · Resources |
 | `demo`         | TL;DR · Why it matters · **Demo highlights** · **Code & samples** · Architecture · Resources |
-| `panel`        | TL;DR · Top highlights · Why it matters · Customer takeaways · Resources |
+| `panel`        | TL;DR · Top highlights · Why it matters · Resources |
 | `lab`          | TL;DR · Why it matters · Session summary · **Code & samples** · Caveats · Resources |
 | `lightning`    | TL;DR · Top highlights · Resources |
 | `announcement` | TL;DR · **Key announcements** · Why it matters · Resources |
