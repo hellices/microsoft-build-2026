@@ -140,9 +140,9 @@ last_updated: 2026-06-22
 
 출처: [Supported models 표](https://learn.microsoft.com/en-us/azure/horizondb/ai/ai-functions#supported-models). `model` 인자를 생략하면 AIMM이 등록한 기본 alias가 자동 적용됨.
 
-### Managed Models (AIMM 일찍 모델)
+### Managed Models — AIMM이 자동 등록해주는 모델
 
-AI Model Management (limited preview) 활성화 시 3개의 모델이 자동 등록되며 테너트는 endpoint/키 관리 필요 없음 ([Managed models](https://learn.microsoft.com/en-us/azure/horizondb/ai/ai-model-management#managed-models)):
+AI Model Management (limited preview) 활성화 시 3개의 모델이 자동 등록되며 테넌트는 endpoint/키 관리가 필요 없음 ([Managed models](https://learn.microsoft.com/en-us/azure/horizondb/ai/ai-model-management#managed-models)):
 
 | Alias | Model | Type |
 |------|------|------|
