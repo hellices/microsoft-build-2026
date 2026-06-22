@@ -93,7 +93,3 @@ print(result.latency_ms)
 - 🖼️ Slides: <https://example.com/sessions/BRK000/slides.pdf>
 - 💻 GitHub: <https://github.com/example/frobnicator-samples>
 - 📚 Docs: <https://learn.microsoft.com/example/frobnicator/v3>
-
-## Notes
-
-> 데모 환경은 발표자 개인 구독에서 시연됨. Korea Central 가용성은 별도 확인 필요.

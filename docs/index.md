@@ -10,27 +10,40 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 
 ## How to read
 
-각 세션 노트는 다음 순서로 구성됩니다.
+각 세션 노트는 6개 카테고리(Summary / Context / Announcements / Deep dive / Assessment / References)에 묶인 섹션들로 구성됩니다. 자세한 규약은 [Contributing](contributing.md) 참조.
 
-1. **TL;DR** — 한 줄 요약
-2. **Why it matters** — 고객 관점 시사점
-3. **Key announcements** — GA / Preview / SDK
-4. **Session summary** — 섹션별 요약
-5. **Demo highlights** — 데모 타임스탬프
-6. **Resources** — 원본 링크
+| # | 카테고리 | 대표 섹션 |
+|---|---|---|
+| 1 | **Summary** | TL;DR · Top highlights |
+| 2 | **Context** | Why it matters · Customer scenarios |
+| 3 | **Announcements** | Key announcements (표) |
+| 4 | **Deep dive** | Session summary · Architecture · Demo · Code |
+| 5 | **Assessment** | Caveats & open questions |
+| 6 | **References** | Resources · Related sessions · Notes |
 
 ## Sessions
 
-> 세션 노트는 작성되는 대로 아래 표에 추가됩니다. 작성 규약은 [Contributing](contributing.md) 참조.
+> 세션 노트는 작성되는 대로 아래 표에 추가됩니다. Status: 🔜 예정 · ⏳ 작성 중 · ✅ 완료
 
-### 🎤 Keynotes
+### 🎤 Keynote
+
+오프닝/클로징 키노트. 한 자리에서 발표된 announcement를 다른 카테고리 세션 노트와 교차 참조합니다.
 
 | ID | Title | Status |
 |----|-------|--------|
 | KEY01 | Microsoft Build opening keynote | 🔜 |
+
+### 🧱 Azure Platform & Infrastructure
+
+컴퓨트·네트워크·스토리지·기밀 컴퓨팅 등 Azure 기반 인프라 발표.
+
+| ID | Title | Status |
+|----|-------|--------|
 | [BRK226](sessions/BRK226-inside-azure-innovations.md) | Inside Azure innovations with Mark Russinovich | ⏳ |
 
 ### 🤖 Agents & Foundry
+
+에이전트 빌드·런타임·컨텍스트 레이어. Microsoft Foundry / Agent 365 / Microsoft IQ 계열.
 
 | ID | Title | Status |
 |----|-------|--------|
@@ -43,6 +56,8 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 
 ### 🔭 Observability & FinOps for AI
 
+에이전트·LLM 워크로드의 관찰·제어·ROI.
+
 | ID | Title | Status |
 |----|-------|--------|
 | BRK250 | Observe and control agents across any framework with open source tools | 🔜 |
@@ -51,27 +66,31 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 
 ### 🗄️ Data Platform
 
+OLTP·analytics·vector/hybrid search·캐시 등 데이터 플랫폼.
+
 | ID | Title | Status |
 |----|-------|--------|
-| DEM364 | Simplify app dev with cloud-native PostgreSQL in Azure HorizonDB | 🔜 |
+| [DEM364](sessions/DEM364-horizondb-postgresql.md) | Simplify app dev with cloud-native PostgreSQL in Azure HorizonDB | ⏳ |
 | DEM368-R1 | Data Science & Machine Learning with Microsoft Fabric | 🔜 |
-| LIVE143 | What's New in Azure Data: HorizonDB and Rayfin | 🔜 |
-| OD823 | Faster AI Responses with Semantic Caching in Azure Managed Redis | 🔜 |
+| [LIVE143](sessions/LIVE143-azure-data-horizondb-rayfin.md) | What's New in Azure Data: HorizonDB and Rayfin | ⏳ |
+| [OD823](sessions/OD823-managed-redis-semantic-caching.md) | Faster AI Responses with Semantic Caching in Azure Managed Redis | ⏳ |
 
-### 🔐 Security & Supply Chain
+### 🔧 DevOps & Supply Chain
+
+GitHub Actions 위의 자동화·에이전트 워크플로우·공급망 보안.
 
 | ID | Title | Status |
 |----|-------|--------|
-| ODSP938 | Mitigate software supply chain risks in GitHub Actions | 🔜 |
 | [DEM350](sessions/DEM350-github-agentic-workflows.md) | GitHub Agentic Workflows: Automation That Actually Reads the Room | ⏳ |
+| ODSP938 | Mitigate software supply chain risks in GitHub Actions | 🔜 |
 
 ### 📱 On-device & Edge
+
+디바이스/엣지에서 동작하는 AI.
 
 | ID | Title | Status |
 |----|-------|--------|
 | BRKSP90 | Stop routing docstrings to 70B models with on-device AI on Snapdragon | 🔜 |
-
-> Status: 🔜 예정 · ⏳ 작성 중 · ✅ 완료
 
 ## Themes
 

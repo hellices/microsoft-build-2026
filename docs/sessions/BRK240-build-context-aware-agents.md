@@ -220,11 +220,13 @@ A2A · MCP · REST API 세 가지 표준 인터페이스 모두 제공.
   - Web search tool (new, GA): <https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/web-search>
   - Grounding with Bing Search (classic, retiring 2027-03-31): <https://learn.microsoft.com/en-us/azure/foundry-classic/agents/how-to/tools-classic/bing-grounding>
 
+## Related sessions
+
+- [BRK226 — Inside Azure Innovations](BRK226-inside-azure-innovations.md) — Foundry/Manifold/Direct Virtualization 등 IQ 레이어 하단의 Azure 인프라
+- [DEM364 — Azure HorizonDB (PostgreSQL)](DEM364-horizondb-postgresql.md) — 에이전트가 근거로 삼는 데이터/RAG/온톨로지 계층
+- [DEM350 — GitHub Agentic Workflows](DEM350-github-agentic-workflows.md) — 저장소 운영 에이전트의 실제 자동화 패턴
+
 ## About the speakers
 
 - **Amanda Silver** — Corporate Vice President, M365 Core & Work IQ, Microsoft. M365 핵심 + Work IQ 책임. Microsoft 20년차.
 - **Marco Casalaina** — Vice President, Products and AI Futurist, Core AI, Microsoft. Foundry / Core AI 제품 + AI 미래 전략.
-
-## Notes
-
-> 세션 후반에 라이브 데모가 두 번 막혔다가 최종적으로 refund agent 구동까지 성공. 발표 톤은 "데모 장애 통과하면서도 신시대 알리는" 마무리. 고객 배포 시 데모 시간·실수 자체는 메모에서 제외 가능.

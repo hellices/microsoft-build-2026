@@ -16,7 +16,6 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.indexes
     - search.suggest
@@ -74,16 +73,24 @@ extra_css:
 extra_javascript:
   - javascripts/status-chips.js
 
-# nav is intentionally minimal. Session/theme entries will be added as files
-# are authored. Until then MkDocs will still pick up new pages in search.
+# Sidebar groups mirror the categories in docs/index.md.
+# Example/Template pages are kept buildable but hidden from nav via not_in_nav.
+not_in_nav: |
+  sessions/BRK000-example-session.md
+  sessions/_TEMPLATE.md
+  themes/_TEMPLATE.md
+
 nav:
   - Home: index.md
   - Sessions:
-      - Example (BRK000): sessions/BRK000-example-session.md
-      - "BRK226 — Inside Azure Innovations": sessions/BRK226-inside-azure-innovations.md
-      - "BRK240 — Build context-aware agents": sessions/BRK240-build-context-aware-agents.md
-      - "DEM350 — GitHub Agentic Workflows": sessions/DEM350-github-agentic-workflows.md
-      - Template: sessions/_TEMPLATE.md
-  - Themes:
-      - Template: themes/_TEMPLATE.md
+      - Azure Platform & Infrastructure:
+          - "BRK226 — Inside Azure Innovations": sessions/BRK226-inside-azure-innovations.md
+      - Agents & Foundry:
+          - "BRK240 — Build context-aware agents": sessions/BRK240-build-context-aware-agents.md
+      - Data Platform:
+          - "DEM364 — Azure HorizonDB (PostgreSQL)": sessions/DEM364-horizondb-postgresql.md
+          - "LIVE143 — HorizonDB & Rayfin": sessions/LIVE143-azure-data-horizondb-rayfin.md
+          - "OD823 — Azure Managed Redis Semantic Caching": sessions/OD823-managed-redis-semantic-caching.md
+      - DevOps & Supply Chain:
+          - "DEM350 — GitHub Agentic Workflows": sessions/DEM350-github-agentic-workflows.md
   - Contributing: contributing.md

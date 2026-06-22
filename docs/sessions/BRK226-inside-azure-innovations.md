@@ -4,7 +4,7 @@ session_type: breakout
 title: "Inside Azure Innovations with Mark Russinovich"
 speakers:
   - Mark Russinovich (CTO, Deputy CISO and Technical Fellow, Microsoft Azure)
-track: Keynote
+track: Azure Platform & Infrastructure
 level: 300
 duration_min:
 tags: [azure, infrastructure, azure-boost, containers, confidential-computing, ai-infrastructure, manifold, project-mosaic, keynote]
@@ -298,6 +298,12 @@ AI 클러스터가 커질수록 노드 간 인터커넥트가 점점 큰 부담.
   - Azure Confidential Computing: <https://learn.microsoft.com/azure/confidential-computing/>
   - Azure Container Instances: <https://learn.microsoft.com/azure/container-instances/>
   - Azure OpenAI Service: <https://learn.microsoft.com/azure/ai-services/openai/>
+
+## Related sessions
+
+- [BRK240 — Build context-aware agents](BRK240-build-context-aware-agents.md) — Foundry/Manifold 위에 올라가는 에이전트 컨텍스트 레이어 관점
+- [DEM364 — Azure HorizonDB (PostgreSQL)](DEM364-horizondb-postgresql.md) — HorizonDB Serverless 온보딩이 §5 ACI 위에서 동작
+- [LIVE143 — What's New in Azure Data](LIVE143-azure-data-horizondb-rayfin.md) — Azure Boost/ACI 기반 위에 올라가는 데이터 서비스 업데이트
 
 ## About the speaker — Mark Russinovich
 

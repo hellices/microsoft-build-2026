@@ -5,7 +5,7 @@ title: "GitHub Agentic Workflows: Automation That Actually Reads the Room"
 speakers:
   - Ari LiVigni (Sr. Learning Advocate, GitHub)
   - Alejandro Menocal (Senior Service Delivery Engineer, GitHub)
-track: Security & Supply Chain
+track: DevOps & Supply Chain
 level: 200
 duration_min: 25
 tags: [github, agentic-workflows, github-actions, continuous-ai, copilot, claude-code, codex, gemini, safe-outputs, agent-firewall]
@@ -181,11 +181,3 @@ gh aw logs                          # 토큰·시간·AI Credits 소비 추적
 
 - [BRK240 — Build context-aware agents](BRK240-build-context-aware-agents.md) — 에이전트 컨텍스트 레이어와의 관점 비교
 - ODSP938 — Mitigate software supply chain risks in GitHub Actions (작성 예정)
-
-## Notes
-
-- 발표자 인용은 25분 세션 트랜스크립트 요지 기반으로 정리. 정확한 워딩 필요 시 build.microsoft.com 트랜스크립트 재확인.
-- AI가 생성한 세션 요약에는 "CI/CD를 쉽게 한다", "다음 주 public preview" 같은 문장이 포함되어 있는데, 공식 문서 기준으로 둘 다 부정확 — 노트 본문에서는 정정해 반영함.
-- Code & samples의 frontmatter / CLI 예시는 [github.github.com/gh-aw](https://github.github.com/gh-aw/) 메인 페이지 ("Daily Issues Report" 예시) 와 "Manage Cost and Capacity" 섹션에서 직접 확인된 키·명령만 사용. 그 외 frontmatter 키(`engine`, `tools.github.allowed`, `safe-outputs.create-pull-request` 등)는 공식 reference 페이지를 별도 확인 후에만 추가할 것.
-- Customer scenarios는 공식 사이트의 Gallery 6 카테고리(Issue & PR Management / Continuous Documentation / Continuous Improvement / Metrics & Analytics / Quality & Testing / Multi-Repository)에 매핑.
-- 다이어그램은 `tools/gen_dem350_diagrams.py`로 일괄 생성. 좌표 수정 시 같은 스크립트 재실행.

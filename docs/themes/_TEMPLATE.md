@@ -6,8 +6,10 @@
 
 ## Related sessions
 
-- [BRK000](../sessions/BRK000-xxx.md) —
-- [BRK000](../sessions/BRK000-xxx.md) —
+<!-- 실제 작성된 세션만 링크. 예: [BRK226](../sessions/BRK226-inside-azure-innovations.md) — 짧은 한 줄 -->
+
+-
+-
 
 ## What changed
 

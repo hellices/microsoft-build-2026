@@ -102,7 +102,3 @@ last_updated: 2026-06-22
 ```markdown
 - [BRKxxx — ...](BRKxxx-slug.md)
 ```
-
-## Notes  <!-- [권장] 내부 메모. 공개 전 정리/삭제 -->
-
-<!-- 자유 메모 -->

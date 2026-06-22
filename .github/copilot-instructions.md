@@ -78,9 +78,10 @@ last_updated: YYYY-MM-DD     # 필수
 | 5 | **Assessment** | `## Caveats & open questions` | 권장 — 미확정 사항이 있을 때 |
 | 6 | **References** | `## Resources` | 필수 — 최소 Session 링크 |
 |   |   | `## Related sessions` | 권장 — 연관 세션 |
-|   |   | `## Notes` | 권장 — 내부 메모, 공개 전 정리 |
 
 순서는 위 표의 카테고리·섹션 순서를 따릅니다. 섹션 헤딩 이름은 변경하지 않습니다 (조건에 따라 통째 삭제만 함).
+
+> 사이트는 외부 공개용이므로 **내부 메모 / audit trail / 검증 출처 리스트는 노트 본문에 포함하지 않습니다**. 출처 정보가 필요하면 `## Resources` 안에 공식 링크로만 남기세요.
 
 ### 조건별 처리 원칙
 
