@@ -29,7 +29,12 @@ last_updated: 2026-06-22
 
 ## TL;DR
 
-> **Azure HorizonDB** — PostgreSQL 위에 단순히 얹은 게 아니라, **compute/storage를 분리**(disaggregated)하고 **WAL만 storage layer로 보내는 database-as-a-log** 설계를 새로 한 cloud-native PostgreSQL DBaaS. Satya 키노트에서 announce되며 **2026-06 Public Preview**. 데모(`Zava room designer`)의 핵심 메시지는 단순함: **embedding · vector search · BM25 · hybrid · semantic rerank · knowledge graph · AI 모델 호출이 모두 PostgreSQL 한 통 안에서 SQL로 끝남** — 별도의 vector DB, search service, model gateway, 동기화 파이프라인을 두지 않아도 됨. 대표적으로 **임베딩 모델 BYOM**은 `model_registry.model_add(...)` SQL 한 줄 + `managed-identity` 인증으로 완료되고, 이후는 동일 함수 `azure_openai.create_embeddings(...)`로 호출.
+> **Azure HorizonDB** — PostgreSQL 위에 단순히 얹은 게 아니라, **compute/storage 를 분리**(disaggregated)하고 **WAL만 storage layer 로 보내는 database-as-a-log** 설계를 새로 한 cloud-native PostgreSQL DBaaS. Satya 키노트에서 announce되며 **2026-06 Public Preview**.
+>
+> 데모(`Zava room designer`)의 핵심 메시지는 단순함:
+>
+> - **AI 데이터 워크로드가 모두 PostgreSQL 한 통 안에서 SQL로 끝남** — embedding · vector search · BM25 · hybrid · semantic rerank · knowledge graph · AI 모델 호출. 별도의 vector DB · search service · model gateway · 동기화 파이프라인을 둘 필요가 없음.
+> - 대표적으로 **임베딩 모델 BYOM** 은 `model_registry.model_add(...)` SQL 한 줄 + `managed-identity` 인증으로 완료. 이후 호출은 동일 함수 `azure_openai.create_embeddings(...)`.
 
 ## Top highlights
 

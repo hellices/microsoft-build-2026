@@ -16,7 +16,12 @@ last_updated: 2026-06-22
 
 ## TL;DR
 
-> Azure 인프라 연례 딥다이브. Fairwater 데이터센터, Azure Boost 확장, Direct Virtualization, Azure Context Cache, Confidential Live Migration, Azure Integrated HSM, Project Mosaic 광 인터커넥트 연구.
+> Azure 인프라 연례 딥다이브. 발표 주제를 영역별로 묶으면:
+>
+> - **데이터센터·하드웨어** — Fairwater AI 데이터센터, Azure Boost 확장, Direct Virtualization
+> - **AI / agent 인프라** — Azure Context Cache
+> - **보안 · 연속성** — Confidential Live Migration, Azure Integrated HSM
+> - **연구 단계** — Project Mosaic 광 인터커넥트
 
 ## Top highlights
 

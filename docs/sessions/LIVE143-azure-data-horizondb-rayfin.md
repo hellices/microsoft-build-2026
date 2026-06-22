@@ -28,7 +28,12 @@ last_updated: 2026-06-22
 
 ## TL;DR
 
-> Broadcast Stage 15분 라이브 패널 (Nikisha Reyes-Grange · Charles Feddersen · Sachin Patney). 두 가지 announce를 묶어 소개: (1) **Azure HorizonDB** Public Preview — 자세한 내용은 [DEM364](DEM364-horizondb-postgresql.md), (2) **Rayfin** — Copilot/Replit 같은 *prototyping* 환경과 *enterprise-grade production* 사이의 갭을 메우는, TypeScript 코드로 백엔드를 정의하는 open-source(MIT) SDK + CLI. 배포 시 동일 코드가 Microsoft Fabric 위의 governed 서비스로 자동 변환. 함께 Microsoft가 upstream PostgreSQL의 주요 기여자임을 강조 (다가오는 PG 19 코드베이스의 ~8% 변경).
+> Broadcast Stage 15분 라이브 패널 (Nikisha Reyes-Grange · Charles Feddersen · Sachin Patney). 두 가지 announce를 묶어 소개:
+>
+> - **Azure HorizonDB** Public Preview — Satya 키노트 announce. 자세한 내용은 [DEM364](DEM364-horizondb-postgresql.md).
+> - **Rayfin** — Copilot/Replit 같은 *prototyping* 환경과 *enterprise-grade production* 사이의 갭을 메우는, TypeScript 코드로 백엔드를 정의하는 open-source(MIT) SDK + CLI. 배포 시 동일 코드가 Microsoft Fabric 위의 governed 서비스로 자동 변환.
+>
+> 함께 Microsoft가 upstream PostgreSQL의 주요 기여자임을 강조 — 다가오는 PG 19 코드베이스의 약 8% 변경.
 
 ## Top highlights
 

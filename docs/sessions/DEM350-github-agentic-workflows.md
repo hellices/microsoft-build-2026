@@ -17,7 +17,11 @@ last_updated: 2026-06-22
 
 ## TL;DR
 
-> GitHub Actions에 **AI 에이전트를 한 잡으로 끼워 넣는 새 워크플로우 종류** — "Agentic Workflow" — 가 추가된 것. 사람은 YAML 대신 markdown으로 의도를 적고 `gh aw compile`이 일반 Actions가 실행할 `.lock.yml` 로 변환한다. 실행 시 AI 에이전트(Copilot CLI / Claude Code / Codex / Gemini 중 택1)가 그 잡에 들어와 **이슈 트리아지 · CI 실패 분석 · 문서 갱신 · 테스트 보강** 같은 저장소 유지보수 작업을 수행하고, 출력은 샌드박스 바깥의 별도 잡(**safe-outputs**)이 검증해 **리뷰 가능한 PR**로 내놓는다 — **머지는 사람**. 빌드·테스트 같은 결정론적 CI/CD를 대체하는 게 아니라, YAML로 표현하기 어려운 **주관적 작업**을 GitHub Actions 위에 얹는 보완 레이어 ("Continuous AI").
+> GitHub Actions에 **AI 에이전트를 한 잡으로 끼워 넣는 새 워크플로우 종류** — "Agentic Workflow" — 가 추가된 것. 빌드·테스트 같은 결정론적 CI/CD를 대체하지 않고, YAML로 표현하기 어려운 **주관적 작업** 을 GitHub Actions 위에 얹는 보완 레이어 ("Continuous AI").
+>
+> - **저자 흐름** — 사람은 YAML 대신 markdown으로 의도를 적고 `gh aw compile` 이 일반 Actions가 실행할 `.lock.yml` 로 변환.
+> - **실행 흐름** — AI 에이전트(Copilot CLI / Claude Code / Codex / Gemini 중 택1)가 그 잡에 들어와 **이슈 트리아지 · CI 실패 분석 · 문서 갱신 · 테스트 보강** 같은 저장소 유지보수 작업 수행.
+> - **안전 장치** — 출력은 샌드박스 바깥의 별도 잡(**safe-outputs**)이 검증해 **리뷰 가능한 PR**로 내놓음. **머지는 사람**.
 
 ## Why it matters
 
