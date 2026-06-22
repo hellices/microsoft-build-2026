@@ -67,6 +67,8 @@ nav:
   - Home: index.md
   - Sessions:
       - Example (BRK000): sessions/BRK000-example-session.md
+      - "BRK226 — Inside Azure Innovations": sessions/BRK226-inside-azure-innovations.md
+      - "BRK240 — Build context-aware agents": sessions/BRK240-build-context-aware-agents.md
       - Template: sessions/_TEMPLATE.md
   - Themes:
       - Template: themes/_TEMPLATE.md

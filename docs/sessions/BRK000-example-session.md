@@ -87,13 +87,6 @@ print(result.latency_ms)
 - Enterprise Tier의 private link 지원 범위가 미확정.
 - v2의 일부 helper API (`legacy_*`) 는 2027 Q2 종료 예정 — 의존성 점검 필요.
 
-## Customer takeaways
-
-- [ ] 현재 사용 중인 SDK 버전과 helper API 의존성 조사
-- [ ] 도입 리전이 GA 리전과 일치하는지 확인
-- [ ] 비용 시뮬레이터로 신규 가격 모델 영향 추정
-- [ ] PoC 환경에서 cold start 개선 효과 검증
-
 ## Resources
 
 - 🎥 Session: <https://example.com/sessions/BRK000>

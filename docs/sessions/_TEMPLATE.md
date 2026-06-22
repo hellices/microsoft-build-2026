@@ -50,11 +50,6 @@ last_updated: 2026-06-19
 
 -
 
-## Customer takeaways
-
-- [ ]
-- [ ]
-
 ## Resources
 
 - 🎥 Session:

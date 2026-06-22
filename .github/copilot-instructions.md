@@ -61,21 +61,51 @@ last_updated: YYYY-MM-DD     # 필수
 
 ## Required sections in every session note
 
-순서 고정:
+기본 순서 (일반 BRK/DEM 세션):
 
 1. `## TL;DR` — 한두 문장
-2. `## Why it matters` — 고객 관점, 불릿 2~4개
-3. `## Key announcements` — 표 (항목 / 상태 / 날짜 / 비고)
-4. `## Session summary` — 섹션별 (`### 1.`, `### 2.` ...)
-5. `## Demo highlights` — `⏱️ MM:SS — <name>: <one-liner>`
-6. `## Architecture / Diagram` — mermaid 또는 이미지 (선택)
-7. `## Code & samples` — 핵심 스니펫 (선택)
-8. `## Caveats / Open questions` — 미확정 사항
-9. `## Customer takeaways` — `- [ ]` 체크리스트
+2. `## Top highlights` — 키노트/하이라이트 성 세션에서 정말 중요한 3~5개 항목 (`### N. 제목` + 1~2문장 요약). 일반 세션에서는 생략 가능.
+3. `## Why it matters` — 고객 관점, 불릿 2~4개
+4. `## Key announcements` — 표 (항목 / 상태 / 날짜 / 비고)
+5. `## Session summary` — 섹션별 (`### 1.`, `### 2.` ...)
+6. `## Demo highlights` — `⏱️ MM:SS — <name>: <one-liner>`
+7. `## Architecture / Diagram` — 다이어그램 (아래 규칙 참고)
+8. `## Code & samples` — 핵심 스니펫
+9. `## Caveats / Open questions` — 미확정 사항
 10. `## Resources` — Session / Slides / GitHub / Docs
 11. `## Notes` — 내부 메모 (고객 배포 시 제거 가능)
 
-내용이 없으면 섹션을 비워둘 것 — 섹션 자체를 삭제하지 않음.
+### 섹션 적용 규칙
+
+- 일반 세션 (BRK/DEM 등): 내용이 없으면 섹션을 비워두기 — 섹션 자체는 유지.
+- **키노트 및 패널/요약성 세션**: 다음 섹션은 세션 성격에 맞지 않으면 **삭제 가능** — 억지로 비워두지 말 것.
+  - `## Demo highlights` — 데모가 없는 키노트
+  - `## Code & samples` — 코드 스니펫이 없는 세션
+  - `## Resources` 안의 `💻 GitHub` 항목 — 공식 GitHub 저장소가 없는 세션 (다른 Resources 항목은 유지)
+- `## Top highlights`는 정보 밀도가 매우 높은 키노트에서 권장. TL;DR 한 줄로 부족한 "이 세션에서 진짜 기억해야 할 것" 을 3~5개로 상단에 짚어줌.
+
+## Diagrams (Excalidraw + PNG)
+
+- 다이어그램은 **Copilot이 `.excalidraw` JSON 파일로 직접 작성**하고, 사용자는 해당 파일을 VS Code Excalidraw 에디터(`pomdtr.excalidraw-editor`)에서 열어 동일 이름으로 PNG export 만 수행.
+- 폴더 규약:
+  - 세션 파일: `docs/sessions/<SESSION_ID>-<slug>.md`
+  - 다이어그램 폴더: `docs/sessions/<SESSION_ID>-<slug>/`
+  - 다이어그램 파일: `<descriptive-name>.excalidraw` + 동일 basename `<descriptive-name>.png` (둘 다 소문자·하이픈)
+- 노트에서 참조하는 방식 (PNG 만 참조):
+
+  ```markdown
+  ![Azure Boost offload architecture](BRK226-inside-azure-innovations/azure-boost-offload.png)
+  ```
+
+- Copilot이 새 세션 노트를 만들 때:
+  1. 본문에 위 형식으로 PNG 참조를 적어둠 (mermaid 사용 금지 — 별도 지시가 없으면).
+  2. 같은 폴더에 **각 PNG와 동일한 basename의 `.excalidraw` JSON 파일을 직접 생성**. 다이어그램이 여러 개면 다이어그램 수만큼 `.excalidraw` 파일 생성. README 파일은 만들지 않음.
+  3. 다이어그램이 많거나 좌표 계산이 복잡하면 `tools/gen_<session>_diagrams.py` 같은 일회성 생성 스크립트를 만들어 일괄 생성해도 됨 (참고 예: `tools/gen_brk226_diagrams.py`). 스크립트는 유지해 두어 좌표/색상 수정 시 재실행 가능하게 함.
+- Excalidraw JSON 최소 스키마:
+  - 최상위: `{ "type": "excalidraw", "version": 2, "source": "...", "elements": [...], "appState": { "gridSize": null, "viewBackgroundColor": "#ffffff" }, "files": {} }`
+  - 각 element는 `id, type, x, y, width, height, angle, strokeColor, backgroundColor, fillStyle, strokeWidth, strokeStyle, roughness, opacity, groupIds, frameId, roundness, seed, version, versionNonce, isDeleted, boundElements, updated, link, locked` 필드를 가짐. type별 추가 필드 (text → `text, fontSize, fontFamily, textAlign, verticalAlign, baseline, containerId, originalText, lineHeight`; arrow → `points, lastCommittedPoint, startBinding, endBinding, startArrowhead, endArrowhead`).
+- 사용자가 동일한 basename으로 PNG export 만 하면 본문 참조가 자동 표시됨.
+- 예외: 단순 흐름/시퀀스 등 텍스트 다이어그램이 더 적절하다고 사용자가 명시한 경우에만 mermaid 사용.
 
 ## When creating a new theme page
 

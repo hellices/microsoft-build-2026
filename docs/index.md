@@ -17,8 +17,7 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 3. **Key announcements** — GA / Preview / SDK
 4. **Session summary** — 섹션별 요약
 5. **Demo highlights** — 데모 타임스탬프
-6. **Customer takeaways** — 도입 시 점검 항목
-7. **Resources** — 원본 링크
+6. **Resources** — 원본 링크
 
 ## Sessions
 
@@ -29,13 +28,13 @@ Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니
 | ID | Title | Status |
 |----|-------|--------|
 | KEY01 | Microsoft Build opening keynote | 🔜 |
-| BRK226 | Inside Azure innovations with Mark Russinovich | 🔜 |
+| [BRK226](sessions/BRK226-inside-azure-innovations.md) | Inside Azure innovations with Mark Russinovich | ⏳ |
 
 ### 🤖 Agents & Foundry
 
 | ID | Title | Status |
 |----|-------|--------|
-| BRK240 | Build context-aware agents: From data to decisions | 🔜 |
+| [BRK240](sessions/BRK240-build-context-aware-agents.md) | Build context-aware agents: From data to decisions | ⏳ |
 | BRK243 | Claw and agent harness in Microsoft Foundry | 🔜 |
 | BRK246 | Foundry IQ: Fuel agents with enterprise knowledge and agentic | 🔜 |
 | BRK251 | Build secure and enterprise-ready agents with Agent 365 | 🔜 |
