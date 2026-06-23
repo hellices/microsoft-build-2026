@@ -88,6 +88,10 @@ last_updated: 2026-06-23
 
 `00:02:40` Kendra Springer가 Agent 365의 필요성과 Microsoft·서드파티 커스텀 에이전트에 주는 가치를 설명한다. **3대 가치 축** — `00:03:24` Observe(배포된 에이전트를 보고 사용·채택 추세 분석), `00:04:06` Govern(개발 속도를 늦추지 않고 가드레일로 위험 방지), `00:05:01` Secure(Defender·Purview·Entra로 identity·위협 탐지·컴플라이언스). `00:06:10` **Agent 365 SDK**로 기존 에이전트(MS 또는 서드파티)를 래핑해 discoverability·visibility·policy enforcement를 부여하고, 에이전트에 ID와 observability를 주되 기존 거버넌스·보안 프레임워크를 존중한다.
 
+세션의 Agent 365 개요 슬라이드는 에이전트가 control plane으로 들어오는 네 경로를 정리한다 — Microsoft Platforms & Agents와 시장의 인기 에이전트(kore.ai·manus·Genspark 등)는 **Native Integration**(out-of-the-box), Agent SDK(M365 Agent SDK·OpenAI Agent SDK·Agent Framework·LangChain·CrewAI·LlamaIndex)로 만든 것은 **Agent 365 SDK**(developer integrated), Vertex AI·AWS Bedrock 같은 외부 플랫폼은 **Registry Sync**(configured per platform)로 편입된다. 그 아래에 Agent 365가 observe·govern·secure control plane으로 놀이고, Microsoft Entra·Defender·Purview·Intune이 기반을 이룬다.
+
+![Microsoft Agent 365 — Native Integration·Agent 365 SDK·Registry Sync 네 경로와 Entra/Defender/Purview/Intune 기반 (출처: Microsoft Build 2026 BRK251)](BRK251-build-secure-enterprise-ready-agents-agent-365/agent365.png)
+
 ### 3. 아키텍처와 핵심 구성 { #sec-architecture }
 
 `00:07:28` Agent 365는 Microsoft enterprise 도구와 통합된다 — **Entra**(identity), **Defender**(위협 보호), **Purview**(데이터 거버넌스), **Intune**(shadow AI 탐지). `00:08:07` 서로 다른 클라우드·프레임워크·공급자의 이종 에이전트 혼합을 관리한다. `00:12:28` 두 핵심 구조를 정의한다 — **Agent Blueprints**(재사용 명령 세트)와 **Agent Identities**(사용자와 유사한 권한으로 일관되게 행동하는 service principal 확장). `00:13:30` 인증 모델이 사용자 대행(on behalf of)이나 전용 identity로 나뉘는 점을 명확히 한다.
@@ -95,6 +99,10 @@ last_updated: 2026-06-23
 ### 4. End-to-End 데모 { #sec-demo }
 
 `00:13:40` Aarthy가 여러 역할로 에이전트 개발 수명주기를 시연한다. `00:14:09` 개발자로서 **LangChain + Node.js** travel-planning 에이전트를 만들고, SDK skills로 Agent 365용으로 준비한다. `00:15:07` Agent 365 CLI·skills로 observability, Work IQ 서버, identity 등록이 자동 구성된다. `00:19:07` 배포 후 테넌트 가시성 부여·Admin Center 활성화, 사용자 관점으로 전환해 Teams에서 여행 추천을 요청하고 Teams·Word를 오가며 협업한다. `00:22:01` 에이전트가 안전한 identity·관리된 권한·투명한 텔레메트리를 가진 enterprise "employee"처럼 동작함을 보인다.
+
+데모의 개발·런타임 흐름을 슬라이드로 보면 — **Dev workflow**는 *Agent built on Langchain → Create Entra resources → Instrument for Observability → Use MCP servers → Add Notifications and handling → Register and Publish*, **Runtime flow**는 *Owner가 Word comment로 @Agent 호출 → Agent가 알림 수신 → 처리하며 observability emit → 알림에 응답*으로 이어진다.
+
+![Agent 365 dev workflow & runtime flow — Langchain 빌드부터 Entra·Observability·MCP·Notifications·Publish, 그리고 Word @멘션 런타임 (출처: Microsoft Build 2026 BRK251)](BRK251-build-secure-enterprise-ready-agents-agent-365/agent365-devworkflow.png)
 
 ### 5. Admin 경험과 자동화 { #sec-admin }
 

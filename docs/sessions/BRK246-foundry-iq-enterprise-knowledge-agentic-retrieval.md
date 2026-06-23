@@ -113,6 +113,10 @@ Foundry IQ의 retrieval 핵심인 Azure AI Search **agentic retrieval**은 knowl
 3. **Query execution** — subquery를 knowledge source에 **병렬** 실행(keyword/vector/hybrid). 각 subquery는 semantic rerank(L2)로 가장 관련된 결과를 선별하고 인용용 reference 추출.
 4. **Result synthesis** — 결과를 통합 응답으로 결합. merged content는 항상 반환, source reference·activity log는 선택.
 
+세션에서 공개된 파이프라인 슬라이드는 이 흐름을 한 장으로 보여 준다 — Conversation·Steering Instructions가 **Planning and Iterative Retrieval(LLM)**로 들어가고, **Knowledge Source Retrieval Loop**에서 Search Index·Blob 소스는 *hybrid retrieval and ranking*, MCP·Web 소스는 *federated retrieval and ranking*으로 병렬 조회된 뒤 **Merged results and answer**로 통합된다.
+
+![Agentic Retrieval Pipeline — Planning·Iterative Retrieval → Knowledge Source Retrieval Loop(Search Index·Blob·MCP·Web) → Merged results (출처: Microsoft Build 2026 BRK246)](BRK246-foundry-iq-enterprise-knowledge-agentic-retrieval/agentic-retrieval-search.png)
+
 | Component | Service | 역할 |
 |-----------|---------|------|
 | Knowledge base | Azure AI Search | 파이프라인 오케스트레이션, knowledge source·query 파라미터 관리 |
