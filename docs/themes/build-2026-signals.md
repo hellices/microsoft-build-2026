@@ -60,3 +60,26 @@ Build 2026 에서 announce 된 **Rayfin** 은 이 갭을 다루는 Microsoft 의
 Fabric SaaS 를 런타임으로 사용한다는 것이 왜 *데이터 이동·재구축 없이 governance 를 상속한다* 는 의미인지는 — 세션 노트에.
 
 - → [LIVE143 — Rayfin announce & backend-as-code 메시지](../sessions/LIVE143-azure-data-horizondb-rayfin.md)
+
+## 5. Enterprise Agent 방향성 — 운영 셸 · 지식 공급 · 거버넌스 (Foundry + Agent 365)
+
+데모 에이전트와 enterprise 에서 실제로 굴리는 에이전트 사이의 간격은 결국 세 가지 질문으로 좁혀집니다 — *오래 도는 에이전트를 어떻게 운영하고*(셸) · *사내 지식을 어떻게 권한을 지키며 먹이고*(검색) · *누가 무엇에 접근하는지를 어떻게 통제하느냐*(거버넌스). Build 2026 은 이 셋을 각각 BRK243 · BRK246 · BRK251 로 나눠 답했고, 키노트(KEY01)도 Foundry + Agent 365 로 같은 그림을 비췄습니다.
+
+**① 운영 셸 — Agent harness (BRK243).** agent loop(엔진)를 감싸는 **harness**(차체)가 context 압축 · 메모리 · human-in-the-loop · lifecycle 를 책임지고, loop 는 추론에만 집중합니다. Foundry Agent Service 의 **Hosted agents(Public Preview)** 위에서 long-running · multi-agent 로 운영하며, off-the-shelf(claw 계열 Hermes) 또는 Microsoft Agent Framework 로 조립하는 custom harness 중 선택합니다.
+
+<figure markdown="span">![Agent Framework Workflows · Harness · Agent Loop 구성 (출처: Microsoft Build 2026 BRK243)](../sessions/BRK243-claw-agent-harness-microsoft-foundry/agent-framework-stack.png){ loading=lazy width="640" }<figcaption>슬라이드 출처: Microsoft Build 2026 · BRK243</figcaption></figure>
+
+**② 지식 공급 — Agentic retrieval (BRK246).** 복잡 질의를 subquery 로 분해 → 병렬 실행 → semantic rerank → 통합하는 Azure AI Search 의 **agentic retrieval** 로 사내 지식을 먹입니다. Search Index · Blob 은 hybrid, MCP · Web 은 federated 로 병렬 조회한 뒤 한 응답으로 합칩니다. **Serverless Foundry IQ(Public Preview)** 는 10~20 초 생성 · pay-per-use 이면서 **Entra 권한 · Purview 라벨을 검색 결과에 propagate** 해 호출자의 권한을 넘는 답을 막습니다.
+
+<figure markdown="span">![Agentic Retrieval Pipeline — Planning·Iterative Retrieval → Knowledge Source Retrieval Loop → Merged results (출처: Microsoft Build 2026 BRK246)](../sessions/BRK246-foundry-iq-enterprise-knowledge-agentic-retrieval/agentic-retrieval-search.png){ loading=lazy width="640" }<figcaption>슬라이드 출처: Microsoft Build 2026 · BRK246</figcaption></figure>
+
+**③ 거버넌스 — Agent 365 (BRK251).** Microsoft · 서드파티 · 외부 플랫폼 에이전트를 구분 없이 관측 · 거버넌 · 보호하는 **control plane**(*Observe · Govern · Secure*). 온보딩 경로는 셋 — out-of-the-box **Native Integration**, 개발자용 **Agent 365 SDK**, 외부 플랫폼(Vertex · Bedrock)용 **Registry Sync** — 이고, 모두 **Entra · Defender · Purview · Intune** 위에서 **Agent ID** · 가시성 · 정책을 입습니다.
+
+<figure markdown="span">![Microsoft Agent 365 — Native Integration·Agent 365 SDK·Registry Sync 경로와 Entra/Defender/Purview/Intune 기반 (출처: Microsoft Build 2026 BRK251)](../sessions/BRK251-build-secure-enterprise-ready-agents-agent-365/agent365.png){ loading=lazy width="640" }<figcaption>슬라이드 출처: Microsoft Build 2026 · BRK251</figcaption></figure>
+
+세 축이 Foundry 안에서 어떻게 맞물리는지 — harness 구성요소별 성숙도, agentic retrieval 의 품질 개선 수치, Agent 365 의 admin 자동화는 각 세션 노트에.
+
+- → [BRK243 — Agent harness 패턴](../sessions/BRK243-claw-agent-harness-microsoft-foundry.md)
+- → [BRK246 — Agentic retrieval · Serverless Foundry IQ](../sessions/BRK246-foundry-iq-enterprise-knowledge-agentic-retrieval.md)
+- → [BRK251 — Agent 365 control plane · Agent ID](../sessions/BRK251-build-secure-enterprise-ready-agents-agent-365.md)
+- → [KEY01 — 키노트의 Foundry + Agent 365 프레임](../sessions/KEY01-microsoft-build-opening-keynote.md)
