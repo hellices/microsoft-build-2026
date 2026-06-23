@@ -23,7 +23,7 @@
 
 ### 🎤 Keynote
 
-- KEY01 — Microsoft Build opening keynote
+- [KEY01 — Microsoft Build opening keynote](sessions/KEY01-microsoft-build-opening-keynote.md)
 
 ### 🧱 Azure Platform & Infrastructure
 
@@ -32,22 +32,22 @@
 ### 🤖 Agents & Foundry
 
 - [BRK240 — Build context-aware agents: From data to decisions](sessions/BRK240-build-context-aware-agents.md)
-- BRK243 — Claw and agent harness in Microsoft Foundry
-- BRK246 — Foundry IQ: Fuel agents with enterprise knowledge and agentic
-- BRK251 — Build secure and enterprise-ready agents with Agent 365
-- DEM330 — Build multimodal agents that reason, interact, and take action
-- DEMSP390 — Create multimodal AI agents with persistent memory
+- [BRK243 — Claw and agent harness in Microsoft Foundry](sessions/BRK243-claw-agent-harness-microsoft-foundry.md)
+- [BRK246 — Foundry IQ: Fuel agents with enterprise knowledge and agentic](sessions/BRK246-foundry-iq-enterprise-knowledge-agentic-retrieval.md)
+- [BRK251 — Build secure and enterprise-ready agents with Agent 365](sessions/BRK251-build-secure-enterprise-ready-agents-agent-365.md)
+- [DEM330 — Build multimodal agents that reason, interact, and take action](sessions/DEM330-build-multimodal-agents-reason-interact-act.md)
+- [DEMSP390 — Create multimodal AI agents with persistent memory](sessions/DEMSP390-create-multimodal-ai-agents-persistent-memory.md)
 
 ### 🔭 Observability & FinOps for AI
 
-- BRK250 — Observe and control agents across any framework with open source tools
-- BRK252 — From observability to ROI for AI agents on any framework
+- [BRK250 — Observe and control agents across any framework with open source tools](sessions/BRK250-observe-control-agents-open-source-tools.md)
+- [BRK252 — From observability to ROI for AI agents on any framework](sessions/BRK252-observability-to-roi-ai-agents.md)
 - [ODSP907 — Monitor GenAI applications beyond golden signals](sessions/ODSP907-monitor-genai-beyond-golden-signals.md)
 
 ### 🗄️ Data Platform
 
 - [DEM364 — Simplify app dev with cloud-native PostgreSQL in Azure HorizonDB](sessions/DEM364-horizondb-postgresql.md)
-- DEM368-R1 — Data Science & Machine Learning with Microsoft Fabric
+- [DEM368-R1 — Data Science & Machine Learning with Microsoft Fabric](sessions/DEM368-R1-data-science-machine-learning-microsoft-fabric.md)
 - [LIVE143 — What's New in Azure Data: HorizonDB and Rayfin](sessions/LIVE143-azure-data-horizondb-rayfin.md)
 - [OD823 — Faster AI Responses with Semantic Caching in Azure Managed Redis](sessions/OD823-managed-redis-semantic-caching.md)
 

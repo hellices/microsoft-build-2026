@@ -83,14 +83,24 @@ not_in_nav: |
 nav:
   - Home: index.md
   - Sessions:
+      - Keynote:
+          - "KEY01 — Microsoft Build opening keynote": sessions/KEY01-microsoft-build-opening-keynote.md
       - Azure Platform & Infrastructure:
           - "BRK226 — Inside Azure Innovations": sessions/BRK226-inside-azure-innovations.md
       - Agents & Foundry:
           - "BRK240 — Build context-aware agents": sessions/BRK240-build-context-aware-agents.md
+          - "BRK243 — Claw & agent harness in Microsoft Foundry": sessions/BRK243-claw-agent-harness-microsoft-foundry.md
+          - "BRK246 — Foundry IQ agentic retrieval": sessions/BRK246-foundry-iq-enterprise-knowledge-agentic-retrieval.md
+          - "BRK251 — Agent 365 secure enterprise agents": sessions/BRK251-build-secure-enterprise-ready-agents-agent-365.md
+          - "DEM330 — Build multimodal agents": sessions/DEM330-build-multimodal-agents-reason-interact-act.md
+          - "DEMSP390 — Multimodal AI agents with persistent memory": sessions/DEMSP390-create-multimodal-ai-agents-persistent-memory.md
       - Observability & FinOps for AI:
+          - "BRK250 — Observe & control agents (open source)": sessions/BRK250-observe-control-agents-open-source-tools.md
+          - "BRK252 — From observability to ROI": sessions/BRK252-observability-to-roi-ai-agents.md
           - "ODSP907 — Monitor GenAI beyond golden signals": sessions/ODSP907-monitor-genai-beyond-golden-signals.md
       - Data Platform:
           - "DEM364 — Azure HorizonDB (PostgreSQL)": sessions/DEM364-horizondb-postgresql.md
+          - "DEM368-R1 — Data Science & ML with Microsoft Fabric": sessions/DEM368-R1-data-science-machine-learning-microsoft-fabric.md
           - "LIVE143 — HorizonDB & Rayfin": sessions/LIVE143-azure-data-horizondb-rayfin.md
           - "OD823 — Azure Managed Redis Semantic Caching": sessions/OD823-managed-redis-semantic-caching.md
       - DevOps & Supply Chain:
