@@ -1,97 +1,57 @@
 # Microsoft Build 2026 — Session Notes
 
-Microsoft Build 2026 주요 세션을 고객 관점에서 정리한 노트입니다.
-각 세션은 동일한 템플릿으로 작성되어 빠르게 비교·검토할 수 있습니다.
+## About Microsoft Build 2026
 
-- 📅 **Event**: Microsoft Build 2026
-- 🎯 **Audience**: 엔터프라이즈 고객, 솔루션 아키텍트
-- 📝 **Template**: [`sessions/_TEMPLATE.md`](sessions/_TEMPLATE.md)
-- 👀 **Example**: [`sessions/BRK000-example-session.md`](sessions/BRK000-example-session.md) — 채워진 모습 예시
+**Microsoft Build**는 Microsoft가 매년 개최하는 개발자 컨퍼런스로, AI · 클라우드 · 개발자 도구 영역의 주요 발표와 데모가 한 자리에 모이는 이벤트입니다. **2026년 행사는 6월 2–3일(PT) 미국 샌프란시스코 + 온라인 하이브리드**로 진행되었습니다.
 
-## How to read
+- 📅 **Dates**: 2026-06-02 – 2026-06-03 (PT)
+- 📍 **Location**: San Francisco, CA + Online
+- 🎤 **Sessions**: 총 **219개** (Keynote · Breakout · Demo · Lab · Broadcast stage), [공식 카탈로그](https://build.microsoft.com/en-US/sessions) 기준
+- 👤 **Featured speakers**: Satya Nadella, Mustafa Suleyman, Mark Russinovich, Scott Hanselman 외
 
-각 세션 노트는 6개 카테고리(Summary / Context / Announcements / Deep dive / Assessment / References)에 묶인 섹션들로 구성됩니다. 자세한 규약은 [Contributing](contributing.md) 참조.
-
-| # | 카테고리 | 대표 섹션 |
-|---|---|---|
-| 1 | **Summary** | TL;DR · Top highlights |
-| 2 | **Context** | Why it matters · Customer scenarios |
-| 3 | **Announcements** | Key announcements (표) |
-| 4 | **Deep dive** | Session summary · Architecture · Demo · Code |
-| 5 | **Assessment** | Caveats & open questions |
-| 6 | **References** | Resources · Related sessions · Notes |
-
-## Sessions
-
-> 세션 노트는 작성되는 대로 아래 표에 추가됩니다. Status: 🔜 예정 · ⏳ 작성 중 · ✅ 완료
-
-### 🎤 Keynote
-
-오프닝/클로징 키노트. 한 자리에서 발표된 announcement를 다른 카테고리 세션 노트와 교차 참조합니다.
-
-| ID | Title | Status |
-|----|-------|--------|
-| KEY01 | Microsoft Build opening keynote | 🔜 |
-
-### 🧱 Azure Platform & Infrastructure
-
-컴퓨트·네트워크·스토리지·기밀 컴퓨팅 등 Azure 기반 인프라 발표.
-
-| ID | Title | Status |
-|----|-------|--------|
-| [BRK226](sessions/BRK226-inside-azure-innovations.md) | Inside Azure innovations with Mark Russinovich | ⏳ |
-
-### 🤖 Agents & Foundry
-
-에이전트 빌드·런타임·컨텍스트 레이어. Microsoft Foundry / Agent 365 / Microsoft IQ 계열.
-
-| ID | Title | Status |
-|----|-------|--------|
-| [BRK240](sessions/BRK240-build-context-aware-agents.md) | Build context-aware agents: From data to decisions | ⏳ |
-| BRK243 | Claw and agent harness in Microsoft Foundry | 🔜 |
-| BRK246 | Foundry IQ: Fuel agents with enterprise knowledge and agentic | 🔜 |
-| BRK251 | Build secure and enterprise-ready agents with Agent 365 | 🔜 |
-| DEM330 | Build multimodal agents that reason, interact, and take action | 🔜 |
-| DEMSP390 | Create multimodal AI agents with persistent memory | 🔜 |
-
-### 🔭 Observability & FinOps for AI
-
-에이전트·LLM 워크로드의 관찰·제어·ROI.
-
-| ID | Title | Status |
-|----|-------|--------|
-| BRK250 | Observe and control agents across any framework with open source tools | 🔜 |
-| BRK252 | From observability to ROI for AI agents on any framework | 🔜 |
-| ODSP907 | Monitor GenAI applications beyond golden signals | 🔜 |
-
-### 🗄️ Data Platform
-
-OLTP·analytics·vector/hybrid search·캐시 등 데이터 플랫폼.
-
-| ID | Title | Status |
-|----|-------|--------|
-| [DEM364](sessions/DEM364-horizondb-postgresql.md) | Simplify app dev with cloud-native PostgreSQL in Azure HorizonDB | ⏳ |
-| DEM368-R1 | Data Science & Machine Learning with Microsoft Fabric | 🔜 |
-| [LIVE143](sessions/LIVE143-azure-data-horizondb-rayfin.md) | What's New in Azure Data: HorizonDB and Rayfin | ⏳ |
-| [OD823](sessions/OD823-managed-redis-semantic-caching.md) | Faster AI Responses with Semantic Caching in Azure Managed Redis | ⏳ |
-
-### 🔧 DevOps & Supply Chain
-
-GitHub Actions 위의 자동화·에이전트 워크플로우·공급망 보안.
-
-| ID | Title | Status |
-|----|-------|--------|
-| [DEM350](sessions/DEM350-github-agentic-workflows.md) | GitHub Agentic Workflows: Automation That Actually Reads the Room | ⏳ |
-| ODSP938 | Mitigate software supply chain risks in GitHub Actions | 🔜 |
-
-### 📱 On-device & Edge
-
-디바이스/엣지에서 동작하는 AI.
-
-| ID | Title | Status |
-|----|-------|--------|
-| BRKSP90 | Stop routing docstrings to 70B models with on-device AI on Snapdragon | 🔜 |
+이 사이트는 그중 **일부 세션을 고객·아키텍트 관점에서** 한국어로 정리한 노트 모음입니다. 전체 세션 라인업·녹화·발표자료는 [공식 Microsoft Build 사이트](https://build.microsoft.com/en-US/sessions)에서 확인할 수 있습니다.
 
 ## Themes
 
-세션 정리가 완료된 후 주제별로 묶어 시사점을 정리합니다.
+어떤 발표가 있었는지 큰 그림을 먼저 보고 싶다면 — 아래 [정리된 세션](#sessions)을 기준으로 주제별 시사점을 정리한 페이지부터.
+
+- [Build 2026 Recap](themes/build-2026-signals.md)
+
+## Sessions
+
+각 세션을 카테고리별로 직접 찾아 읽고 싶다면.
+
+### 🎤 Keynote
+
+- KEY01 — Microsoft Build opening keynote
+
+### 🧱 Azure Platform & Infrastructure
+
+- [BRK226 — Inside Azure innovations with Mark Russinovich](sessions/BRK226-inside-azure-innovations.md)
+
+### 🤖 Agents & Foundry
+
+- [BRK240 — Build context-aware agents: From data to decisions](sessions/BRK240-build-context-aware-agents.md)
+- BRK243 — Claw and agent harness in Microsoft Foundry
+- BRK246 — Foundry IQ: Fuel agents with enterprise knowledge and agentic
+- BRK251 — Build secure and enterprise-ready agents with Agent 365
+- DEM330 — Build multimodal agents that reason, interact, and take action
+- DEMSP390 — Create multimodal AI agents with persistent memory
+
+### 🔭 Observability & FinOps for AI
+
+- BRK250 — Observe and control agents across any framework with open source tools
+- BRK252 — From observability to ROI for AI agents on any framework
+- [ODSP907 — Monitor GenAI applications beyond golden signals](sessions/ODSP907-monitor-genai-beyond-golden-signals.md)
+
+### 🗄️ Data Platform
+
+- [DEM364 — Simplify app dev with cloud-native PostgreSQL in Azure HorizonDB](sessions/DEM364-horizondb-postgresql.md)
+- DEM368-R1 — Data Science & Machine Learning with Microsoft Fabric
+- [LIVE143 — What's New in Azure Data: HorizonDB and Rayfin](sessions/LIVE143-azure-data-horizondb-rayfin.md)
+- [OD823 — Faster AI Responses with Semantic Caching in Azure Managed Redis](sessions/OD823-managed-redis-semantic-caching.md)
+
+### 🔧 DevOps & Supply Chain
+
+- [DEM350 — GitHub Agentic Workflows: Automation That Actually Reads the Room](sessions/DEM350-github-agentic-workflows.md)
+- [ODSP938 — Mitigate software supply chain risks in GitHub Actions](sessions/ODSP938-mitigate-github-actions-supply-chain.md)

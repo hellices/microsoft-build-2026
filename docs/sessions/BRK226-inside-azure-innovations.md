@@ -280,6 +280,7 @@ AI 클러스터가 커질수록 노드 간 인터커넥트가 점점 큰 부담.
 ## Caveats & open questions
 
 - 공식 GA / Preview 라벨·리전·SKU 슬라이드 미명시 → 제품 페이지 확인 필요
+- **Azure Boost 성능 수치 출처 차이** — 본 노트의 *네트워크 400 Gb/s · 원격 디스크 20 GB/s / 1M IOPS* 는 Mark Russinovich 발표 슬라이드 기준. Microsoft Learn 일반 안내 페이지 [Azure Boost overview](https://learn.microsoft.com/azure/azure-boost/overview) 는 **최대 200 Gbps · 14 GBps / 750K IOPS** 로 표기 — Build 2026에서 발표된 next-gen 수치가 공식 docs에 아직 미반영된 것으로 추정 (로컬 SSD 36 GB/s / 6.6M IOPS는 양쪽 일치).
 - Azure Boost 400 Gb/s = "speeds up to" 표기 — SKU별 실측 상이 가능
 - 다수 신규 제품/코드네임의 외부 노출 범위·가격 정보 미공개
 

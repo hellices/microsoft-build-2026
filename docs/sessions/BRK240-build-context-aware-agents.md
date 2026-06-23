@@ -190,8 +190,10 @@ A2A · MCP · REST API 세 가지 표준 인터페이스 모두 제공.
 
 ## Caveats & open questions
 
-- **Web IQ** — "select Azure customers" 한정. 일반 가용성·리전·가격 미공개.
+- **"Web IQ" 명칭은 발표 슬라이드 브랜딩** — Microsoft Learn 공식 docs 상의 기능명은 [Web Search tool](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/web-search) (Azure Foundry Agents). "select Azure customers" 한정 라벨도 발표 출처 — 공개 가용성·리전·가격 미공개.
+- **Work IQ GA 2026-06-16** — 본 노트에 적힌 날짜는 발표 슬라이드 표기. Azure Updates API (`releasecommunications/api/v2/azure`) 에는 *"Work IQ" / "Microsoft IQ"* 라는 release record 가 검색되지 않음 — 공식 release note 확인 후 보강 필요.
 - Foundry IQ / Fabric IQ "Available today" 표기 — 정확한 GA 라벨·SLA·가격 슬라이드 없음.
+- **데모 customer 사례 (Nasdaq Boardvantage · Sitecore · Hanwha Qcells · Miro)** 와 GSDAT 점수 · p95 latency 수치는 모두 발표 슬라이드 출처 — Microsoft 공식 case study 페이지 등 외부 확인 가능한 출처는 미공개.
 - 데모가 라이브 네트워크 장애로 두 차례 중단 — 무대 위 안정성·재시도 패턴 검증 필요.
 - 4개 IQ 사이의 호출 단가 모델 (토큰 vs 호출 수 vs 데이터 볼륨) 미공개.
 - 온톨로지 모델링 도구·언어·버전 관리 방식 슬라이드 미명시.
