@@ -171,7 +171,7 @@ agentic retrieval은 Azure Portal, Microsoft Foundry 포털, REST API, 또는 Az
 
 ## Related sessions
 
-- [BRK240 — Build context-aware agents: From data to decisions](BRK240-context-aware-agents-data-to-decisions.md)
+- [BRK240 — Build context-aware agents: From data to decisions](BRK240-build-context-aware-agents.md)
 - [BRK243 — Claw and agent harness in Microsoft Foundry](BRK243-claw-agent-harness-microsoft-foundry.md)
 - [BRK250 — Observe and control agents across any framework with open source tools](BRK250-observe-control-agents-open-source-tools.md)
 
